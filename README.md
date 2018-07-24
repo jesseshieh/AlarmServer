@@ -4,7 +4,10 @@ virtualenv alarm
 source alarm/bin/activate
 pip install tornado # version 5.1
 pip install requests # version 2.19.1
-openssl req -x509 -nodes -days 3650 -newkey rsa:2048 -keyout server.key -out server.crt`
+# openssl req -x509 -nodes -days 3650 -newkey rsa:2048 -keyout server.key -out server.crt`
+gpg -d jesse.crt.asc > jesse.crt
+gpg -d jesse.key.asc > jesse.key
+gpg -d alarmserver.cfg.asc > alarmserver.cfg
 python alarmserver.py -c alarmserver.cfg
 
 This is still beta software.
