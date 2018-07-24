@@ -2,8 +2,8 @@ I did:
 git checkout smartthings
 virtualenv alarm
 source alarm/bin/activate
-pip install tornado
-pip install requests
+pip install tornado # version 5.1
+pip install requests # version 2.19.1
 openssl req -x509 -nodes -days 3650 -newkey rsa:2048 -keyout server.key -out server.crt`
 python alarmserver.py -c alarmserver.cfg
 
