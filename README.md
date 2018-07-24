@@ -1,3 +1,12 @@
+I did:
+git checkout smartthings
+virtualenv alarm
+source alarm/bin/activate
+pip install tornado
+pip install requests
+openssl req -x509 -nodes -days 3650 -newkey rsa:2048 -keyout server.key -out server.crt`
+python alarmserver.py -c alarmserver.cfg
+
 This is still beta software.
 
 The ssl certificates that are provided are intended for demo purposes only.  

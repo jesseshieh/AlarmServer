@@ -1,4 +1,12 @@
 *.pyc
 
+# virtualenv
+alarm
+
+# config file
 alarmserver.cfg
 .idea
+
+# certs
+jesse.crt
+jesse.key
